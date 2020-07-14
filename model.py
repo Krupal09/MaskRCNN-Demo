@@ -19,8 +19,11 @@ import re
 import logging
 from collections import OrderedDict
 import numpy as np
-import scipy.misc
-import tensorflow as tf
+import scipy.misc 
+# commented because of issue https://stackoverflow.com/questions/56226284/why-do-i-get-attributeerror-module-tensorflow-has-no-attribute-placeholder
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import keras
 import keras.backend as K
 import keras.layers as KL
