@@ -21,6 +21,8 @@ from collections import OrderedDict
 import numpy as np
 import scipy.misc
 import tensorflow as tf
+print(tf.VERSION)
+print(tf.keras.__version__)
 import keras
 import keras.backend as K
 import keras.layers as KL
