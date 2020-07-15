@@ -17,6 +17,7 @@ class InferenceConfig(coco.CocoConfig):
 
 
 def main():
+    print("In main file of Krupal09 - MaskRCNN-Keypoint-Demo")
     parse = argparse.ArgumentParser()
     parse.add_argument("--image", type=str)
     parse.add_argument('--video', type=str)
