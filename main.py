@@ -92,6 +92,17 @@ def main():
                                 0.3 * color[1],
                                 0.3 * color[2]] + 0.7 * roi).astype(np.uint8)
                 mask = mask.astype(np.uint8)
+                
+###### Krupal : Printing contour result :
+                contours_result = cv.findContours(mask,
+                                                         cv.RETR_TREE,
+                                                         cv.CHAIN_APPROX_SIMPLE)
+    
+                print("#####################")
+                print("contours_result")
+                print(contours_result)
+                print("#####################")
+###### end 
                 contours, hierarchy = cv.findContours(mask,
                                                          cv.RETR_TREE,
                                                          cv.CHAIN_APPROX_SIMPLE)
