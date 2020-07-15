@@ -17,7 +17,6 @@ class InferenceConfig(coco.CocoConfig):
 
 
 def main():
-    print("In main file of Krupal09 - MaskRCNN-Keypoint-Demo")
     parse = argparse.ArgumentParser()
     parse.add_argument("--image", type=str)
     parse.add_argument('--video', type=str)
@@ -94,16 +93,6 @@ def main():
                                 0.3 * color[2]] + 0.7 * roi).astype(np.uint8)
                 mask = mask.astype(np.uint8)
                 
-###### Krupal : Printing contour result :
-                contours_result = cv.findContours(mask,
-                                                         cv.RETR_TREE,
-                                                         cv.CHAIN_APPROX_SIMPLE)
-    
-                print("#####################")
-                print("contours_result")
-                print(contours_result)
-                print("#####################")
-###### end 
                 contours, hierarchy = cv.findContours(mask,
                                                          cv.RETR_TREE,
                                                          cv.CHAIN_APPROX_SIMPLE)
