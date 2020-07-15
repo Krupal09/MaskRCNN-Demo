@@ -92,7 +92,7 @@ def main():
                                 0.3 * color[1],
                                 0.3 * color[2]] + 0.7 * roi).astype(np.uint8)
                 mask = mask.astype(np.uint8)
-                _, contours, hierarchy = cv.findContours(mask,
+                contours, hierarchy = cv.findContours(mask,
                                                          cv.RETR_TREE,
                                                          cv.CHAIN_APPROX_SIMPLE)
                 cv.drawContours(frame, contours, -1, color, 3,
