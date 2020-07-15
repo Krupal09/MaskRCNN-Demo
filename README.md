@@ -1,4 +1,4 @@
-# MaskRCNN-Keypoint-Demo
+# MaskRCNN-Demo
 This repo is about Mask RCNN with human-keypoint for human pose estimation. This repo relies on FangYang970206's [repo](https://github.com/FangYang970206/MaskRCNN-Keypoint-Demo).
 
 # Requirements
@@ -15,7 +15,7 @@ You can open the notebook in google colab, the environment can prepare in one ce
 # Run in local
 first, clone this repo,
 ```bash
-$ git clone https://github.com/FangYang970206/MaskRCNN-Keypoint-Demo
+$ git clone https://github.com/Krupal09/MaskRCNN-Demo
 ```
 then,
 ```bash
