@@ -1,5 +1,5 @@
 # MaskRCNN-Keypoint-Demo
-This repo is about Mask RCNN with human-keypoint. More info can be seen in this [repo](https://github.com/chrispolo/Keypoints-of-humanpose-with-Mask-R-CNN).
+This repo is about Mask RCNN with human-keypoint for human pose estimation. This repo relies on [repo](https://github.com/FangYang970206/MaskRCNN-Keypoint-Demo).
 
 # Requirements
 * Python 3.4+
