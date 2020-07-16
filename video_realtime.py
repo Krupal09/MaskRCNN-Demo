@@ -137,8 +137,10 @@ def display_keypoints(image, boxes, keypoints, class_ids, class_names,
 
 
 
-
-cap = cv2.VideoCapture(0)
+# an attempt to resolve an error VIDEOIO ERROR: V4L: can't open camera by index 0
+# referred https://github.com/skvark/opencv-python/issues/124
+#cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(-1)
 while(1):
     # get a frame
     ret, frame = cap.read()
