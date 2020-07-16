@@ -23,18 +23,7 @@ $ cd MaskRCNN-Keypoint-Demo
 ```
 download the **pre-trained model**([baiduyun](https://pan.baidu.com/s/1C3o10VclGQy42UZu2dsl1w),[dropbox](https://www.dropbox.com/s/5ctrg3br94srrx9/mask_rcnn_coco.h5)) in the MaskRCNN-Keypoint-Demo folder.
 
-finally, you have two choices:
+finally :
 ```bash
 $ python main.py --image path/to/image
 ```
-or
-```bash
-$ python main.py --video path/to/video
-```
-Example:
-```
-$ python main.py --image media/ski.jpg
-$ python main.py --video media/human.mp4
-```
-# Result
-![demo.gif](gif/demo.gif)
