@@ -17,10 +17,11 @@ ROOT_DIR = os.getcwd()
 # Directory to save logs and trained model
 MODEL_DIR = os.path.join(ROOT_DIR, "mylogs")
 # Local path to trained weights file
-COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco_humanpose.h5")
+COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
+# commented original one to provide mask_rcnn_coco.h5 as a directory for trained weights
 #COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco_humanpose.h5")
-# providing absolute path because root directory is conitaing "MaskRCNN-Demo" multiple times !
-COCO_MODEL_PATH = os.path.join("https://www.dropbox.com/s/5ctrg3br94srrx9/mask_rcnn_coco.h5", "")
+#providing absolute path because root directory is conitaing "MaskRCNN-Demo" multiple times !
+#COCO_MODEL_PATH = os.path.join("https://www.dropbox.com/s/5ctrg3br94srrx9/mask_rcnn_coco.h5", "")
 
 class InferenceConfig(coco.CocoConfig):
     GPU_COUNT = 1
@@ -35,9 +36,11 @@ model = modellib.MaskRCNN(mode="inference",
                           model_dir=MODEL_DIR)
 
 # Get path to saved weights
+model_path = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
+# commented original one to provide mask_rcnn_coco.h5 as a directory for trained weights
 #model_path = os.path.join(ROOT_DIR, "mask_rcnn_coco_humanpose.h5")
 # providing absolute path because root directory is conitaing "MaskRCNN-Demo" multiple times !
-model_path = os.path.join("https://www.dropbox.com/s/5ctrg3br94srrx9/mask_rcnn_coco.h5", "")
+#model_path = os.path.join("https://www.dropbox.com/s/5ctrg3br94srrx9/mask_rcnn_coco.h5", "")
 
 assert model_path != "", "Provide path to trained weights"
 print("Loading weights from ", model_path)
